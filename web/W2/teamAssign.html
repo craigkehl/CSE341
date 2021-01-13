@@ -29,20 +29,27 @@
       <div class="card-body">
         <h5 class="card-title">Millennial Falcon Tunel?</h5>
         <p class="card-text text-primary">Must be a 1990's Star Wars Engineer</p>
-        <input class="btn btn-primary" value="New Color">
+      </div>
+      <input type="text" class="form-control" placeholder="type color" aria-label="new color" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <span class="input-group-text" id="basic-addon2">Change</span>
       </div>
     </div>
     
-    <div class="card" style="width: 18rem;">
+    <div class="card" id="card3" style="width: 18rem;">
       <img class="card-img-top" src="https://cdn.pixabay.com/photo/2015/01/15/16/16/staircase-600468_960_720.jpg" alt="Stone Stairs">
       <div class="card-body">
         <h5 class="card-title">Stone Descent</h5>
         <p class="card-text text-primary">Does anyone else feel quizzy?</p>
-        <input class="btn btn-primary" value="New Color">
       </div>
-    </div>
-  </section>
- <script src="./JS/main.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.4.5/jscolor.min.js"></script>
+      <input type="text" class="form-control" placeholder="type color" aria-label="new color" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <span class="input-group-text " id="basic-addon2">Change</span>
+      </div>
+    </div> 
+  </section>     
+  <button type="button" class="btn btn-primary" onclick="fade()">Fade Stone Descent</button>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./JS/main.js"></script> 
 </body>
 </html>

@@ -50,3 +50,6 @@ section {
   max-width: 112px;
 }
 
+.btn-primary {
+  margin: 0 3rem;
+}
