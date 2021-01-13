@@ -1,0 +1,52 @@
+body {
+  background-color: grey;
+}
+
+h1 {
+  margin: 2rem;
+  padding: 1rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  flex: 1 1 300px;
+  margin: 2rem;
+  max-width: 400px;
+  background-color:azure;
+  box-shadow: 3px 3px 5px black;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  font-weight: 600;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 7px black;
+}
+
+.card-title {
+  font-size: 20px;
+  font-size: 5vw;
+  font-size: clamp(20px, 5vw, 24px);
+  width: 100%;
+}
+
+.card-text {
+  font-size: 16px;
+  font-size: 4vw;
+  font-size: clamp(16px, 4vw, 22px);
+}
+
+.card-body input {
+  max-width: 112px;
+}
+
