@@ -8,7 +8,7 @@
   <title>W2 Team Assignment</title>  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="./CSS/style.css
+  <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
   <h1>Week 2 Team Activity</h1>
