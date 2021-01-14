@@ -5,6 +5,9 @@ body {
 h1 {
   margin: 2rem;
   padding: 1rem;
+  border-radius: 5px;
+  color: white;
+  background-color: #0069d9;
 }
 
 section {
@@ -52,4 +55,13 @@ section {
 
 .btn-primary {
   margin: 0 3rem;
+}
+
+span.btn-primary {
+  margin: 20px;
+}
+
+.form-control {
+  width: 130px;
+  margin: 0 20px;
 }

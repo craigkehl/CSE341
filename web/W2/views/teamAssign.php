@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Craig Kehl">
   <meta name="description" content="CSE341 Team Assignment to build a home page">
-  <title>W2 Team Assignment</title>
+  <title>W2 Team Assignment</title>  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./CSS/style.css">
@@ -21,7 +21,7 @@
       </div> 
         <input type="text" class="form-control" placeholder="type color" aria-label="new color" aria-describedby="basic-addon2">
         <div class="input-group-append">
-          <span class="input-group-text" id="basic-addon2">Change</span>
+          <span class="btn btn-primary" id="basic-addon2">Change</span>
         </div>
     </div>
     
@@ -34,7 +34,7 @@
       </div>
       <input type="text" class="form-control" placeholder="type color" aria-label="new color" aria-describedby="basic-addon2">
       <div class="input-group-append">
-        <span class="input-group-text" id="basic-addon2">Change</span>
+        <span class="btn btn-primary" id="basic-addon2">Change</span>
       </div>
     </div>
     
@@ -46,7 +46,7 @@
       </div>
       <input type="text" class="form-control" placeholder="type color" aria-label="new color" aria-describedby="basic-addon2">
       <div class="input-group-append">
-        <span class="input-group-text " id="basic-addon2">Change</span>
+        <span class="btn btn-primary" id="basic-addon2">Change</span>
       </div>
     </div> 
   </section>     
