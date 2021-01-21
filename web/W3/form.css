@@ -1,0 +1,27 @@
+fieldset label,
+fieldset input {
+  display: block;
+}
+
+ul.radioBtn {
+  padding: 0;
+}
+
+label,
+.radioBtn {
+  margin-top: 1rem;
+}
+
+.radioBtn li {  
+  list-style-type: none;
+}
+
+.radioBtn label {
+  display: inline-block;
+}
+
+.radioBtn input {
+  display: inline;
+} 
+
+
