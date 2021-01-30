@@ -1,0 +1,21 @@
+DATABASE_URL='postgres://livjdmtzgwfwbx:bc23d7a9363354479ab77a807ac475f00046d69873bf1dc230721e63c989e61a@ec2-54-208-233-243.compute-1.amazonaws.com:5432/dfncotblab04ld'her
+
+DATABASE_URL='postgres://
+User: livjdmtzgwfwbx
+PW: bc23d7a9363354479ab77a807ac475f00046d69873bf1dc230721e63c989e61a
+Host: @ec2-54-208-233-243.compute-1.amazonaws.com
+Port: 5432
+Database: dfncotblab04ld
+
+DATABASE_URL='postgres://livjdmtzgwfwbx:bc23d7a9363354479ab77a807ac475f00046d69873bf1dc230721e63c989e61a@ec2-54-208-233-243.compute-1.amazonaws.com:5432/dfncotblab04ld'
+
+Created postgresql-sinuous-65876 as DATABASE_URL
+DATABASE_URL='postgres://
+
+User - borsrvbcraregv
+PW - 93a9e740fa22ac1cea19d813d484d046acbec12146f09452e9607f85dfb04387
+host - ec2-3-231-48-230.compute-1.amazonaws.com
+port - 5432
+database - d1bfc30govrusa
+
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
