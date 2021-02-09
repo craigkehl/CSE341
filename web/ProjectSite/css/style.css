@@ -75,6 +75,7 @@ a:hover {
     padding: 10px 30px;
     display: flex;
     flex: 1;
+    flex-wrap: wrap;
     background-color: rgb(148, 161, 161);
 }
 
@@ -88,6 +89,8 @@ a:hover {
 
 h1 {
   color: white;
+  font-size: clamp(20px, 4vw, 40px);
+
 }
 
 section {
@@ -126,3 +129,135 @@ section {
   transform: scale(1.2);
 }
 
+.cardContainer {
+  width: 100%;
+  margin: 1rem;
+  padding: 0 15;
+  background-color: orange;
+  border-radius: 5px;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 24rem;
+  position: relative;
+  font-size: .875rem;
+  min-width: 0;
+  word-wrap: break-word;
+  background: #FFF;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 14%);
+  margin-top: 30px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.cardHeaderContainer:first-child {
+  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.cardHeaderContainer {
+  color: #FFF;
+  margin: 0 15px;
+  padding: 0;
+  position: relative;
+}
+
+.cardIcon {
+  float: left;
+  padding: 15px;
+  margin-top: -20px;
+  margin-right: 15px;
+  border-radius: 3px;
+  background: linear-gradient(60deg, #ec407a, #d81b60);
+  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(233 30 99 / 40%);
+}
+
+.cardHeaderContainer h4 {
+  color: #3C4858;
+  margin-top: 15px;
+  min-height: auto;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  margin-bottom: 0px;
+  text-decoration: none;
+  font-size: 1.3em;
+  line-height: 1.4em;
+}
+
+.cardContent {
+  flex: 1 1 auto;
+  padding: 0.9375rem 20px;
+  position: relative;
+  letter-spacing: normal;
+  box-sizing: border-box;
+}
+
+.cardFormContainer {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  margin: 16px 0 8px 0;
+  display: inline-flex;
+  padding: 0;
+  flex-direction: column;
+  vertical-align: top;
+  
+}
+
+.cardFormContainer .inputRow {
+  padding: 0 15px;
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.cardFormContainer .inputRow .inputContainer {
+  flex: 1 1 auto;
+  padding: 0.9375rem 14px;
+  max-width: 100%;
+}
+
+
+.cardFormContainer .inputRow .inputContainer label { 
+  border: 0;
+  padding: 0 0 0 .5rem; 
+  font-size: 1rem; 
+  margin: 0;
+}
+
+input.cardForm {
+  padding: 14px;
+  font: inherit;
+  color: currentColor;
+  width: 100%;
+  border: 1px solid grey;
+  height: 1.1875em;
+  margin: 0 0 1rem 0;
+  display: block;
+  min-width: 0;
+  background: none;
+  box-sizing: content-box;
+  border-radius: 5px;
+}
+
+/* .cardFormContainer .inputRow .inputContainer input {
+  padding: 18.5px 14px;
+  font: inherit;
+  color: currentColor;
+  width: 100%;
+  border: 0;
+  height: 1.1875em;
+  margin: 0;
+  display: block;
+  min-width: 0;
+  background: none;
+  box-sizing: content-box;
+} */
