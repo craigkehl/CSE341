@@ -1,23 +1,15 @@
 <?php
 require('connection.php');
 $db = get_db();
-// session_start();
 
 $book = test_input($_POST['book']);
 $chapter = test_input($_POST['chapter']);
 $verse = test_input($_POST['verse']);
 $content = test_input($_POST['content']);
-// $topic_ids = array();
 $topic_ids = $_POST['topic'];
 $newtopic = test_input($_POST['topicname']);
 $chbox = isset($_POST['newtopic']) ? $_POST['newtopic'] : null;
 
-// echo $newtopic;
-// exit;
-// print_r($_POST['topic']);
-// echo $book;
-// echo $content;
-// echo $topic_ids;
 
 function test_input($data)
 {
@@ -42,7 +34,7 @@ if (isset($newtopic) && isset($chbox)) {
 }
 
 
-// // info just for the scriptures table
+// info just for the scriptures table
 $query = 'INSERT INTO scriptures(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
 $stmt = $db->prepare($query);
 $stmt->bindValue(':book', $book);
@@ -74,12 +66,3 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 }
 echo $displaynewstring;
 
-// header("Location: scriptures.php");
-
-// header doesn't keep variable names where location does
-
-// if(isset($stmt)){
-//     echo "<h2>Your scripture was added to the database.</h2>";
-//     echo "$book $chapter:$verse $content<br>"; 
-//     echo "<a href='scriptures.php'>Back to Scripture Page</a>";
-// }
