@@ -1,12 +1,9 @@
 <?php
-/*
- * Proxy connection to the database
- */ 
+    /*
+    * Proxy connection to the database
+    */ 
 
-function dbConnect() {
-
-    try
-    {
+    try {
         $dbUrl = getenv('DATABASE_URL');
 
         $dbOpts = parse_url($dbUrl);
@@ -35,9 +32,10 @@ function dbConnect() {
         echo '</ol>';
     }
 
-    catch (PDOException $ex)
-    {
+    catch (PDOException $ex) {
         echo 'Error!: ' . $ex->getMessage();
         die();
-    }
-}
+    };
+
+?>
+<h1>I hope this works</h1>
