@@ -14,5 +14,5 @@ switch($action) {
     break;
 
   default:
-    include 'view/teamAssign.php';
+    include 'accounts/';
 }
