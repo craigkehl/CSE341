@@ -24,7 +24,15 @@ function dbConnect() {
         // and can be very helpful in debugging! (But you would likely want
         // to disable it for production environments.)
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $db;
+
+        echo '<h4>Player Roster</h4><ol>';
+ 
+        foreach ($db->query('SELECT first_name, last_name FROM public.persons') as $row)
+        {
+          echo "<li> Person:". $row['first_name'] . " " . $row['last_name'] . "</li>";
+        }
+        
+        echo '</ol>';
     }
 
     catch (PDOException $ex)
