@@ -46,6 +46,7 @@
             </div>
             <h4>Player Name</h4>
           </div>
+          <?php echo $dbTest; ?>
           <div class="cardContent">
               <div class="cardFormContainer">
               <form action="#" method="POST">

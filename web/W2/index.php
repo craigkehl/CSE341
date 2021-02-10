@@ -15,4 +15,5 @@ switch($action) {
 
   default:
     include 'view/player-registration.php';
+
 }
