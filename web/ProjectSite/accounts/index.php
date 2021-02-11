@@ -6,7 +6,7 @@ require_once '../library/connections.php';
 require_once '../model/accounts-model.php';
 // require_once '../library/functions.php';
 
-$dbTest = isDbConnected();
+$db = getDb();
 // Get the classifications array
 
 $action = filter_input(INPUT_GET, 'action');
@@ -17,8 +17,11 @@ $action = filter_input(INPUT_GET, 'action');
 switch($action) {
   case 'login':
     include '../view/login.php';
-    break;    
+    break; 
+    
+    case 'register_player':
+      include '../view/player-registration.php';
+      break;   
 
   default:
-  include 'view/player-registration.php';
 }

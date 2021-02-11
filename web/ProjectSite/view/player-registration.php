@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +13,16 @@
   <link rel="stylesheet" href="../css/style.css"> -->
 </head>
 <body>
+  <?php
+    echo '<h4>Player Roster</h4><ol>';
+     
+    foreach ($db->query('SELECT first_name, last_name FROM public.persons') as $row)
+    {
+      echo "<li> Person:". $row['first_name'] . " " . $row['last_name'] . "</li>";
+    }
+    
+    echo '</ol>';
+  ?>
   
   <div id="pageContainer">
     <div id="headerContainer">

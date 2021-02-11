@@ -14,5 +14,6 @@ switch($action) {
     break;
 
   default:
-    include 'accounts/';
+    header("Location: ./accounts/index.php?action=register_player");
+    exit();
 }
