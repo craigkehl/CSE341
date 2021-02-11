@@ -6,23 +6,9 @@
   <meta name="author" content="Craig Kehl">
   <meta name="description" content="CSE341 Project Page">
   <title>Player Registration</title> 
-       <?php require 'includes/links.php'; ?>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/style.css"> -->
+       <?php require $_SERVER['DOCUMENT_ROOT'].'ProjectSite/view/includes/links.php'; ?>  
 </head>
 <body>
-  <?php
-    echo '<h4>Player Roster</h4><ol>';
-     
-    foreach ($db->query('SELECT first_name, last_name FROM public.persons') as $row)
-    {
-      echo "<li> Person:". $row['first_name'] . " " . $row['last_name'] . "</li>";
-    }
-    
-    echo '</ol>';
-  ?>
   
   <div id="pageContainer">
     <div id="headerContainer">
