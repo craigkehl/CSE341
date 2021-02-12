@@ -6,10 +6,7 @@
   <meta name="author" content="Craig Kehl">
   <meta name="description" content="CSE341 Project Page">
   <title>Player Information</title> 
-       <?php 
-        // require $_SERVER['HTTP_HOST'].'ProjectSite/view/includes/links.php'; 
-        require 'includes/links.php'; 
-       ?>  
+       <?php include 'includes/links.php';  ?>  
 </head>
 <body>  
   <div id="pageContainer">
@@ -34,13 +31,11 @@
       <div id="mainContentContainer">
         <h1> You Made it!</h1>
         <?php
-          echo '<h4>Player Roster</h4><ol>';
-        
+          echo '<h4>Player Roster</h4><ol>';        
           foreach ($db->query('SELECT first_name, last_name FROM persons') as $row)
           {
             echo "<li> Person:". $row['first_name'] . " " . $row['last_name'] . "</li>";
-          }
-          
+          }          
           echo '</ol>';
         ?>
       </div>

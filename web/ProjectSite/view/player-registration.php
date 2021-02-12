@@ -33,7 +33,7 @@
     <div id="mainSectionContainer">
       <div id="mainContentContainer">
         <?php if (isset($message)) { echo $message; } ?> 
-        <form action="/ProjectSite/accounts/index.php" method="post">
+        <form action="/ProjectSite/accounts/index.php" method="POST">
           <div class="cardContainer player name">
             <div class="cardHeaderContainer  player">
               <div class="cardIcon">
