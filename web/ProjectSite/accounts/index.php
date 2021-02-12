@@ -68,7 +68,7 @@ switch($action) {
               $hashedPassword);
     
     // check and report the result
-    if ($regOutcome > h0) {
+    if ($regOutcome > 0) {
       $message = "<p>Thanks for registering $playerFirstname. Please use your email and password to login.</p>";
       include '../view/login.php';
       exit;
