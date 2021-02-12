@@ -57,3 +57,5 @@ function regClient(
     return 0;
   }
 };
+
+var_dump($db);
