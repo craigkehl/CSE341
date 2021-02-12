@@ -30,17 +30,21 @@
         <li><a href="">Projects</a></li>
       </ul>
     </div>
-    <h1> You Made it!</h1>
-    <?php
-       echo '<h4>Player Roster</h4><ol>';
-     
-       foreach ($db->query('SELECT first_name, last_name FROM persons') as $row)
-       {
-         echo "<li> Person:". $row['first_name'] . " " . $row['last_name'] . "</li>";
-       }
-       
-       echo '</ol>';
-    ?>
+    <div id="mainSectionContainer">
+      <div id="mainContentContainer">
+        <h1> You Made it!</h1>
+        <?php
+          echo '<h4>Player Roster</h4><ol>';
+        
+          foreach ($db->query('SELECT first_name, last_name FROM persons') as $row)
+          {
+            echo "<li> Person:". $row['first_name'] . " " . $row['last_name'] . "</li>";
+          }
+          
+          echo '</ol>';
+        ?>
+      </div>
+    </div>
   </div>  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
