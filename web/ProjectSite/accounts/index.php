@@ -4,7 +4,7 @@
 //Get the database and model brought into scope
 require_once '../library/connections.php';
 require_once '../model/accounts-model.php';
-// require_once '../library/functions.php';
+require_once '../library/functions.php';
 
 $db = getDb();
 // Get the classifications array
@@ -68,7 +68,7 @@ switch($action) {
               $hashedPassword);
     
     // check and report the result
-    if ($regOutcome >0) {
+    if ($regOutcome > h0) {
       $message = "<p>Thanks for registering $playerFirstname. Please use your email and password to login.</p>";
       include '../view/login.php';
       exit;
