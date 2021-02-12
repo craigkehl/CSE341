@@ -99,6 +99,23 @@
                     <input class="cardForm" type="text" name="parentMobile">
                     <label for="parentEmail">Email</label>
                     <input class="cardForm" type="email" name="parentEmail">
+                    <label class="last-list" for="clientPassword">Password 
+                    <span class="required">Password requirements:
+                      <ul>
+                        <li>Must contain at least one;
+                          <ul class="sub-list_1">
+                            <li>upper case letter (A-Z)</li>
+                            <li>lower case letter (a-z)</li>
+                            <li>special character (! # $ % - _ = +)</li>
+                            <li>number (0-9)</li>
+                          </ul>
+                        <li>Minimum Length = 8 characters</li>
+                        <li>No blank spaces</li>
+                      </ul>
+                    </span>
+                    <input name="clientPassword" id="clientPassword" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                  </label>
+                  <input class="checkbox" type="checkbox" onclick="showPassword()">Show Password
                   </div>
                 </div>
               </div>
