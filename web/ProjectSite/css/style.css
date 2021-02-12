@@ -133,10 +133,10 @@ form {
   width: 100%;
   min-width: 0;
   border: 0;
-  /* margin: 16px 0 8px 0;
-  display: inline-flex;
+  /* margin: 16px 0 8px 0; */
+  display: flex;
   padding: 0;
-  flex-direction: column;
+  /* flex-direction: column;
   vertical-align: top; */
   
 }
