@@ -34,97 +34,99 @@
       <div id="mainContentContainer">
         <?php if (isset($message)) { echo $message; } ?> 
         <form action="/ProjectSite/accounts/index.php" method="POST">
-          <div class="cardContainer player name">
-            <div class="cardHeaderContainer  player">
-              <div class="cardIcon">
-                <span class="material-icons">contact_page</span>
+          <div class="formCardsContainer">
+            <div class="cardContainer player name">
+              <div class="cardHeaderContainer  player">
+                <div class="cardIcon">
+                  <span class="material-icons">contact_page</span>
+                </div>
+                <h4>Player Name</h4>
               </div>
-              <h4>Player Name</h4>
-            </div>
-            <!-- Player's Name -->
-            <div class="cardContent">
-              <div class="cardFormContainer">
-                <div class="inputRow">
-                  <div class="inputContainer">
-                    <label for="playerFirstName">Name</label>
-                    <input class="cardForm" type="text" name="playerFirstName" 
-                        <?php if(isset($playerFirstname)){echo "value='$playerFirstname'";} ?>
-                        required>
-                    <label for="playerLastName">Last Name</label>
-                    <input class="cardForm" type="text" name="playerLastName" 
-                        <?php if(isset($playerLastname)){echo "value='$playerLastname'";} ?>
-                        required>
-                    <lable for="playerBirthdate">Birthdate:</label>
-                    <input type="text" id="datepicker" name="playerBirthdate">
-                    <p>Please select your gender:</p>
-                    <input type="radio" id="male" name="playerGender" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="playerGender" value="female">
-                    <label for="female">Female</label>
+              <!-- Player's Name -->
+              <div class="cardContent">
+                <div class="cardFormContainer">
+                  <div class="inputRow">
+                    <div class="inputContainer">
+                      <label for="playerFirstName">Name</label>
+                      <input class="cardForm" type="text" name="playerFirstName" 
+                          <?php if(isset($playerFirstname)){echo "value='$playerFirstname'";} ?>
+                          required>
+                      <label for="playerLastName">Last Name</label>
+                      <input class="cardForm" type="text" name="playerLastName" 
+                          <?php if(isset($playerLastname)){echo "value='$playerLastname'";} ?>
+                          required>
+                      <lable for="playerBirthdate">Birthdate:</label>
+                      <input type="text" id="datepicker" name="playerBirthdate">
+                      <p>Please select your gender:</p>
+                      <input type="radio" id="male" name="playerGender" value="male">
+                      <label for="male">Male</label>
+                      <input type="radio" id="female" name="playerGender" value="female">
+                      <label for="female">Female</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>       
+          
+              <!-- Parent's Name -->
+            <div class="cardContainer parent name">
+              <div class="cardHeaderContainer  parent">
+                <div class="cardIcon">
+                  <span class="material-icons">contact_page</span>
+                </div>
+                <h4>Parent Info</h4>
+              </div>
+              <div class="cardContent">
+                <div class="cardFormContainer">
+                  <div class="inputRow">
+                    <div class="inputContainer">
+                      <label for="parentFirstName">Name</label>
+                      <input class="cardForm" type="text" name="parentFirstName">
+                      <label for="parentLastName"></label>Last Name</label>
+                      <input class="cardForm" type="text" name="parentLastName">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>       
-        
-            <!-- Parent's Name -->
-          <div class="cardContainer parent name">
-            <div class="cardHeaderContainer  parent">
-              <div class="cardIcon">
-                <span class="material-icons">contact_page</span>
+            <div class="cardContainer parent contactInfo">
+              <div class="cardHeaderContainer  parent">
+                <div class="cardIcon">
+                  <span class="material-icons">contact_mail</span>
+                </div>
+                <h4>Parent Contact Info</h4>
               </div>
-              <h4>Parent Info</h4>
-            </div>
-            <div class="cardContent">
-              <div class="cardFormContainer">
-                <div class="inputRow">
-                  <div class="inputContainer">
-                    <label for="parentFirstName">Name</label>
-                    <input class="cardForm" type="text" name="parentFirstName">
-                    <label for="parentLastName"></label>Last Name</label>
-                    <input class="cardForm" type="text" name="parentLastName">
+              <div class="cardContent">
+                <div class="cardFormContainer">
+                  <div class="inputRow">
+                    <div class="inputContainer">
+                      <label for="parentMobile"></label>Mobile Number</label>
+                      <input class="cardForm" type="text" name="parentMobile">
+                      <label for="parentEmail">Email</label>
+                      <input class="cardForm" type="email" name="parentEmail">
+                      <label class="last-list" for="parentPassword">Password                     
+                      <input name="parentPassword" id="parentPassword" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                    </label>
+                    <input class="checkbox" type="checkbox" onclick="showPassword()">Show Password
+                    <span class="required">Password requirements:
+                        <ul>
+                          <li>Must contain at least one;
+                            <ul class="sub-list_1">
+                              <li>upper case letter (A-Z)</li>
+                              <li>lower case letter (a-z)</li>
+                              <li>special character (! # $ % - _ = +)</li>
+                              <li>number (0-9)</li>
+                            </ul>
+                          <li>Minimum Length = 8 characters</li>
+                          <li>No blank spaces</li>
+                        </ul>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div>  
           </div>
-          <div class="cardContainer parent contactInfo">
-            <div class="cardHeaderContainer  parent">
-              <div class="cardIcon">
-                <span class="material-icons">contact_mail</span>
-              </div>
-              <h4>Parent Contact Info</h4>
-            </div>
-            <div class="cardContent">
-              <div class="cardFormContainer">
-                <div class="inputRow">
-                  <div class="inputContainer">
-                    <label for="parentMobile"></label>Mobile Number</label>
-                    <input class="cardForm" type="text" name="parentMobile">
-                    <label for="parentEmail">Email</label>
-                    <input class="cardForm" type="email" name="parentEmail">
-                    <label class="last-list" for="parentPassword">Password                     
-                    <input name="parentPassword" id="parentPassword" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                  </label>
-                  <input class="checkbox" type="checkbox" onclick="showPassword()">Show Password
-                  <span class="required">Password requirements:
-                      <ul>
-                        <li>Must contain at least one;
-                          <ul class="sub-list_1">
-                            <li>upper case letter (A-Z)</li>
-                            <li>lower case letter (a-z)</li>
-                            <li>special character (! # $ % - _ = +)</li>
-                            <li>number (0-9)</li>
-                          </ul>
-                        <li>Minimum Length = 8 characters</li>
-                        <li>No blank spaces</li>
-                      </ul>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>  
           <input type="submit" name="submit" class="formBtn" value="Register">
           <input type="hidden" name="action" value="register_player">
         </form>
