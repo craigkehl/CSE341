@@ -6,7 +6,10 @@
   <meta name="author" content="Craig Kehl">
   <meta name="description" content="CSE341 Project Page">
   <title>Player Registration</title> 
-       <?php require $_SERVER['HTTP_HOST'].'ProjectSite/view/includes/links.php'; ?>  
+       <?php 
+        // require $_SERVER['HTTP_HOST'].'ProjectSite/view/includes/links.php'; 
+        require '/includes/links.php'; 
+       ?>  
 </head>
 <body>
   
