@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     
   $(".navShowHide").on("click", function() {
@@ -19,3 +18,11 @@ $(document).ready(function() {
 
 });
 
+function showPassword() {
+    let pwInput = document.getElementById("clientPassword");
+    if (pwInput.type === "password") {
+      pwInput.type = "text";
+    } else {
+      pwInput.type = "password";
+    }
+  }

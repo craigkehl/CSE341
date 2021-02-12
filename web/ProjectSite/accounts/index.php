@@ -33,12 +33,12 @@ switch($action) {
     // $parentPassword = filter_input(INPUT_POST, 'parentPassword', FILTER_SANITIZE_STRING);
 
      // filter and store the data
-     $playerFirstname = test_input($_POST['playerFirstname']);// added filter type
-     $playerLastname = test_input($_POST['playerLastname']);
+     $playerFirstname = test_input($_POST['playerFirstName']);// added filter type
+     $playerLastname = test_input($_POST['playerLastName']);
      $playerBirthdate = test_input($_POST['playerBirthdate']);// added filter type
      $playerGender = test_input($_POST['playerGender']);
-     $parentFirstname = test_input($_POST['parentFirstname']);// added filter type
-     $parentLastname = test_input($_POST['parentLastname']);
+     $parentFirstname = test_input($_POST['parentFirstName']);// added filter type
+     $parentLastname = test_input($_POST['parentLastName']);
      $parentMobile = test_input($_POST['parentMobile']);
      $parentEmail = test_input($_POST['parentEmail']);
      $parentPassword = test_input($_POST['parentPassword']);
