@@ -104,8 +104,8 @@
                       <input class="cardForm" type="text" name="parentMobile">
                       <label for="parentEmail">Email</label>
                       <input class="cardForm" type="email" name="parentEmail">
-                      <label class="last-list" for="parentPassword">Password                     
-                      <input name="parentPassword" id="parentPassword" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                      <label for="parentPassword">Password                     
+                      <input class="cardForm" name="parentPassword" id="parentPassword" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                     </label>
                     <input class="checkbox" type="checkbox" onclick="showPassword()">Show Password
                     <span class="required">Password requirements:
