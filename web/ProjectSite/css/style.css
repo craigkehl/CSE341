@@ -239,16 +239,6 @@ input.cardForm {
   border-radius: 5px;
 }
 
-/* .cardFormContainer .inputRow .inputContainer input {
-  padding: 18.5px 14px;
-  font: inherit;
-  color: currentColor;
-  width: 100%;
-  border: 0;
-  height: 1.1875em;
-  margin: 0;
-  display: block;
-  min-width: 0;
-  background: none;
-  box-sizing: content-box;
-} */
+input.formBtn {
+  margin-left: 1rem;
+}
