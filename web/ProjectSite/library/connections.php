@@ -26,5 +26,7 @@
         return $db;    
     }
 
+    $db = getDb();
+    var_dump($db);
 
 ?>
