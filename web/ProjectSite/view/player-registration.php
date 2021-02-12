@@ -25,7 +25,6 @@
         </a>
       </div>
     </div>
-
     <div id="sideNavContainer" style="display:none;">
       <ul>
         <li><a href="">About Me</a></li>
@@ -34,50 +33,51 @@
     </div>
 
     <div id="mainSectionContainer">
-      <div id="mainContentContainer"> 
-        <div class="cardContainer player name">
-          <div class="cardHeaderContainer  player">
-            <div class="cardIcon">
-              <span class="material-icons">contact_page</span>
+      <div id="mainContentContainer">
+        <?php if (isset($message)) { echo $message; } ?> 
+        <form action="/ProjectSite/accounts/index.php" method="POST">
+          <div class="cardContainer player name">
+            <div class="cardHeaderContainer  player">
+              <div class="cardIcon">
+                <span class="material-icons">contact_page</span>
+              </div>
+              <h4>Player Name</h4>
             </div>
-            <h4>Player Name</h4>
-          </div>
-          <?php echo $dbTest; ?>
-          <div class="cardContent">
-              <div class="cardFormContainer">
-              <form action="#" method="POST">
-                <div class="inputRow">
-                  <div class="inputContainer">
-                    <label for="firstName">Name</label>
-                    <input class="cardForm" type="text" name="firstName">
-                    <label for="lastName"></label>Last Name</label>
-                    <input class="cardForm" type="text" name="lastName">
+            
+            <div class="cardContent">
+                <div class="cardFormContainer">
+                  <div class="inputRow">
+                    <div class="inputContainer">
+                      <label for="firstName">Name</label>
+                      <input class="cardForm" type="text" name="firstName">
+                      <label for="lastName"></label>Last Name</label>
+                      <input class="cardForm" type="text" name="lastName">
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
-          </div>
-        </div>       
-       
-        <div class="cardContainer parent name">
-          <div class="cardHeaderContainer  player">
-            <div class="cardIcon">
-              <span class="material-icons">contact_page</span>
+          </div>       
+        
+          <div class="cardContainer parent name">
+            <div class="cardHeaderContainer  player">
+              <div class="cardIcon">
+                <span class="material-icons">contact_page</span>
+              </div>
+              <h4>Parent Info</h4>
             </div>
-            <h4>Parent Info</h4>
-          </div>
-          <div class="cardContent">
-              <div class="cardFormContainer">
-              <form action="#" method="POST">
-                <div class="inputRow">
-                  <div class="inputContainer">
-                    <label for="firstName">Name</label>
-                    <input class="cardForm" type="text" name="firstName">
-                    <label for="lastName"></label>Last Name</label>
-                    <input class="cardForm" type="text" name="lastName">
+            <div class="cardContent">
+                <div class="cardFormContainer">
+                <form action="#" method="POST">
+                  <div class="inputRow">
+                    <div class="inputContainer">
+                      <label for="firstName">Name</label>
+                      <input class="cardForm" type="text" name="firstName">
+                      <label for="lastName"></label>Last Name</label>
+                      <input class="cardForm" type="text" name="lastName">
+                    </div>
                   </div>
-                </div>
-              </form>
+          </form>
             </div>
           </div>
         </div>
