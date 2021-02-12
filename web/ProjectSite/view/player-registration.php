@@ -47,9 +47,13 @@
                 <div class="inputRow">
                   <div class="inputContainer">
                     <label for="playerFirstName">Name</label>
-                    <input class="cardForm" type="text" name="playerFirstName">
+                    <input class="cardForm" type="text" name="playerFirstName" 
+                        <?php if(isset($playerFirstname)){echo "value='$playerFirstname'";} ?>
+                        required>
                     <label for="playerLastName">Last Name</label>
-                    <input class="cardForm" type="text" name="playerLastName">
+                    <input class="cardForm" type="text" name="playerLastName" 
+                        <?php if(isset($playerLastname)){echo "value='$playerLastname'";} ?>
+                        required>
                     <lable for="playerBirthdate">Birthdate:</label>
                     <input type="text" id="datepicker" name="playerBirthdate">
                     <p>Please select your gender:</p>
@@ -99,8 +103,11 @@
                     <input class="cardForm" type="text" name="parentMobile">
                     <label for="parentEmail">Email</label>
                     <input class="cardForm" type="email" name="parentEmail">
-                    <label class="last-list" for="clientPassword">Password 
-                    <span class="required">Password requirements:
+                    <label class="last-list" for="clientPassword">Password                     
+                    <input name="clientPassword" id="clientPassword" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                  </label>
+                  <input class="checkbox" type="checkbox" onclick="showPassword()">Show Password
+                  <span class="required">Password requirements:
                       <ul>
                         <li>Must contain at least one;
                           <ul class="sub-list_1">
@@ -113,9 +120,6 @@
                         <li>No blank spaces</li>
                       </ul>
                     </span>
-                    <input name="clientPassword" id="clientPassword" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                  </label>
-                  <input class="checkbox" type="checkbox" onclick="showPassword()">Show Password
                   </div>
                 </div>
               </div>
