@@ -19,7 +19,7 @@ $(document).ready(function() {
 });
 
 function showPassword() {
-    let pwInput = document.getElementById("clientPassword");
+    let pwInput = document.getElementById("parentPassword");
     if (pwInput.type === "password") {
       pwInput.type = "text";
     } else {

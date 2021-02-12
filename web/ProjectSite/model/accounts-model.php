@@ -1,6 +1,6 @@
 <?php
 /* This is the model for the accounts */ 
-
+$db = getDb();
 // This function handles site registrations
 function regClient(
           $playerFirstname, 
