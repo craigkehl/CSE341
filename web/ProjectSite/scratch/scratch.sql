@@ -1,0 +1,1 @@
+INSERT INTO persons(first_name, last_name, birthdate, is_female) VALUES ('Zach', 'Erikson', '1998-03-15', false);

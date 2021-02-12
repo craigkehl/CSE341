@@ -1,7 +1,5 @@
 <?php
-require_once '../library/connections.php';
 /* This is the model for the accounts */ 
-$db = getDb();
 // This function handles site registrations
 function regClient(
           $playerFirstname, 
@@ -57,5 +55,3 @@ function regClient(
     return 0;
   }
 };
-
-var_dump($db);
