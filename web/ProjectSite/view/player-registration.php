@@ -56,7 +56,7 @@
                           <?php if(isset($playerLastname)){echo "value='$playerLastname'";} ?>
                           required>
                       <lable for="playerBirthdate">Birthdate:</label>
-                      <input type="text" id="datepicker" name="playerBirthdate">
+                      <input class="cardForm" type="text" id="datepicker" name="playerBirthdate">
                       <p>Please select your gender:</p>
                       <input type="radio" id="male" name="playerGender" value="male">
                       <label for="male">Male</label>
@@ -104,11 +104,10 @@
                       <input class="cardForm" type="text" name="parentMobile">
                       <label for="parentEmail">Email</label>
                       <input class="cardForm" type="email" name="parentEmail">
-                      <label for="parentPassword">Password                     
+                      <label for="parentPassword">Password</label>                    
                       <input class="cardForm" name="parentPassword" id="parentPassword" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                    </label>
-                    <input class="checkbox" type="checkbox" onclick="showPassword()">Show Password
-                    <span class="required">Password requirements:
+                      <input class="checkbox" type="checkbox" onclick="showPassword()">Show Password
+                      <span class="required">Password requirements:
                         <ul>
                           <li>Must contain at least one;
                             <ul class="sub-list_1">
