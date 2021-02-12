@@ -6,7 +6,7 @@ require_once '../library/connections.php';
 require_once '../model/accounts-model.php';
 require_once '../library/functions.php';
 
-$db = getDb();
+
 // Get the classifications array
 
 $action = filter_input(INPUT_GET, 'action');
