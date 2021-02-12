@@ -1,6 +1,5 @@
 $( function() {
-    $( "#datepicker" ).datepicker();
-    $( ".selector" ).datepicker({
+    $( "#datepicker" ).datepicker({
         changeYear: true,
         changeMonth: true
       });
