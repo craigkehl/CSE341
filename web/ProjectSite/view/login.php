@@ -48,15 +48,8 @@
                   <div class="inputContainer">
                     <label for="playerFirstName">Name</label>
                     <input class="cardForm" type="text" name="playerFirstName">
-                    <label for="playerLastName">Last Name</label>
+                    <label for="playerLastName"></label>Last Name</label>
                     <input class="cardForm" type="text" name="playerLastName">
-                    <lable for="playerBirthdate">Birthdate:</label>
-                    <input type="text" id="datepicker" name="playerBirthdate">
-                    <p>Please select your gender:</p>
-                    <input type="radio" id="male" name="playerGender" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="playerGender" value="female">
-                    <label for="female">Female</label>
                   </div>
                 </div>
               </div>
@@ -112,9 +105,6 @@
   </div>  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="../js/main.js"></script> 
-  <script src="../js/main.js"></script>
 </body>
 </html>

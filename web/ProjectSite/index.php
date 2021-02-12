@@ -14,6 +14,6 @@ switch($action) {
     break;
 
   default:
-    header("Location: ./accounts/index.php?action=register_player");
+    header("Location: ./accounts/index.php?action=register_player_form");
     exit();
 }
