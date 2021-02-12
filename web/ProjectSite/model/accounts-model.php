@@ -1,7 +1,7 @@
 <?php
 require_once '../library/connections.php';
 /* This is the model for the accounts */ 
-$databaseCon = getDb();
+$db = getDb();
 // This function handles site registrations
 function regClient(
           $playerFirstname, 
@@ -19,7 +19,7 @@ function regClient(
   //      VALUES (:first_name, :last_name, :birthdate, :is_female)';
   $query = 'INSERT INTO persons(first_name, last_name, birthdate, is_female) VALUES (:first_name, :last_name, :birthdate, :is_female)';
 
-  $stmt = $databaseCon->prepare($query);
+  $stmt = $db->prepare($query);
   $stmt->bindValue(':first_name', $playerFirstname, PDO::PARAM_STR);
   $stmt->bindValue(':last_name', $playerLastname, PDO::PARAM_STR);
   $stmt->bindValue(':birthdate', $playerBirthdate, PDO::PARAM_STR);
@@ -28,13 +28,13 @@ function regClient(
   $stmt->execute();
   // Ask how many rows changed as a result of our insert
   $rowsChanged = $stmt->rowCount();
-  $newPlayerId = $databaseCon->lastInsertId("persons_id_seq");
+  $newPlayerId = $db->lastInsertId("persons_id_seq");
   // Return the indication of success (rows changed)
   if ($rowsChanged) {
     // insert player's parent
     $query2 = 'INSERT INTO persons(first_name, last_name, mobile_number, email, password) VALUES (:first_name, :last_name, :mobile_number, :email, :password)';
 
-    $stmt = $databaseCon->prepare($query2);
+    $stmt = $db->prepare($query2);
     $stmt->bindValue(':first_name', $parentFirstname, PDO::PARAM_STR);
     $stmt->bindValue(':last_name', $parentLastname, PDO::PARAM_STR);
     $stmt->bindValue(':mobile_number', $parentMobile, PDO::PARAM_STR);
@@ -47,7 +47,7 @@ function regClient(
     $newParentId = $db->lastInsertId("persons_id_seq");  
     
     $query3 = 'INSERT INTO parents(parent_person_id, parent_child_id) VALUES(:new_parent_id, new_player_id)';
-    $stmt = $databaseCon->prepare($query3);
+    $stmt = $db->prepare($query3);
     $stmt->bindValue(':new_parent_id', $newParentId, PDO::PARAM_INT);
     $stmt->bindValue(':new_player_id', $newPlayerId, PDO::PARAM_INT);
     $stmt->execute();
