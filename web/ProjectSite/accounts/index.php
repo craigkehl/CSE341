@@ -20,19 +20,31 @@ switch($action) {
   break; 
 
   case 'register_player':
-    // filter and store the data
-    $playerFirstname = filter_input(INPUT_POST, 'playerFirstname', FILTER_SANITIZE_STRING);// added filter type
-    $playerLastname = filter_input(INPUT_POST, 'playerLastname', FILTER_SANITIZE_STRING);
-    $playerBirthdate = filter_input(INPUT_POST, 'playerBirthdate', FILTER_SANITIZE_STRING);// added filter type
-    $playerGender = filter_input(INPUT_POST, 'playerGender', FILTER_SANITIZE_STRING);
-    $parentFirstname = filter_input(INPUT_POST, 'parentFirstname', FILTER_SANITIZE_STRING);// added filter type
-    $parentLastname = filter_input(INPUT_POST, 'parentLastname', FILTER_SANITIZE_STRING);
-    $parentMobile = filter_input(INPUT_POST, 'parentMobile', FILTER_SANITIZE_STRING);
-    $parentEmail = filter_input(INPUT_POST, 'parentEmail', FILTER_SANITIZE_EMAIL);
-    $parentPassword = filter_input(INPUT_POST, 'parentPassword', FILTER_SANITIZE_STRING);
+    
+    // // filter and store the data
+    // $playerFirstname = filter_input(INPUT_POST, 'playerFirstname', FILTER_SANITIZE_STRING);// added filter type
+    // $playerLastname = filter_input(INPUT_POST, 'playerLastname', FILTER_SANITIZE_STRING);
+    // $playerBirthdate = filter_input(INPUT_POST, 'playerBirthdate', FILTER_SANITIZE_STRING);// added filter type
+    // $playerGender = filter_input(INPUT_POST, 'playerGender', FILTER_SANITIZE_STRING);
+    // $parentFirstname = filter_input(INPUT_POST, 'parentFirstname', FILTER_SANITIZE_STRING);// added filter type
+    // $parentLastname = filter_input(INPUT_POST, 'parentLastname', FILTER_SANITIZE_STRING);
+    // $parentMobile = filter_input(INPUT_POST, 'parentMobile', FILTER_SANITIZE_STRING);
+    // $parentEmail = filter_input(INPUT_POST, 'parentEmail', FILTER_SANITIZE_EMAIL);
+    // $parentPassword = filter_input(INPUT_POST, 'parentPassword', FILTER_SANITIZE_STRING);
 
-    $parentEmail = checkEmail($parentEmail);
-    $checkPassword = checkPassword($parentPassword);
+     // filter and store the data
+     $playerFirstname = test_input($_POST['playerFirstname']);// added filter type
+     $playerLastname = test_input($_POST['playerLastname']);
+     $playerBirthdate = test_input($_POST['playerBirthdate']);// added filter type
+     $playerGender = test_input($_POST['playerGender']);
+     $parentFirstname = test_input($_POST['parentFirstname']);// added filter type
+     $parentLastname = test_input($_POST['parentLastname']);
+     $parentMobile = test_input($_POST['parentMobile']);
+     $parentEmail = test_input($_POST['parentEmail']);
+     $parentPassword = test_input($_POST['parentPassword']);
+
+    // $parentEmail = checkEmail($parentEmail);
+    // $checkPassword = checkPassword($parentPassword);
 
     // check if there is data in the variable
     if (
@@ -44,7 +56,7 @@ switch($action) {
       empty($parentLastname) || 
       empty($parentMobile) ||
       empty($parentEmail) || 
-      empty($checkPassword)) {
+      empty($parentPassword)) {
       $message = '<p>Please provide information for all required form fields.</p>';
       include '../view/player-registration.php';
       exit;

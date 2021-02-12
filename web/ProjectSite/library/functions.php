@@ -26,3 +26,10 @@ function checkPassword($clientPassword) {
   return preg_match($pattern, $clientPassword);
 }
 
+function test_input($data)
+{
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
