@@ -137,29 +137,22 @@ form {
 
 .formCardsContainer{ 
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   width: 100%;
 }
 
 .cardContainer {
   width: 100%;
-  margin: 1rem;
+  margin: 1.8rem 1rem;
   padding: 0 15;
-  background-color: orange;
-  border-radius: 5px;
-  border: 0;
-  display: flex;
-  flex-direction: column;
   flex: 1 1 24rem;
-  position: relative;
-  font-size: .875rem;
+  max-width: 30rem;
   min-width: 0;
-  word-wrap: break-word;
+  font-size: .875rem;
   background: #FFF;
   box-shadow: 0 1px 4px 0 rgb(0 0 0 / 14%);
-  margin-top: 30px;
   border-radius: 6px;
-  margin-bottom: 30px;
 }
 
 .cardHeaderContainer:first-child {
