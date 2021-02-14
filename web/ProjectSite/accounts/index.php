@@ -1,8 +1,11 @@
 <?php
 // This is the accounts controller for this website
+session_start();
+require('../library/connection.php');
+$db = get_db();
+
 
 //Get the database and model brought into scope
-require_once '../library/connections.php';
 // require_once '../library/functions.php';
 // require_once '../model/accounts-model.php';
 

@@ -1,6 +1,4 @@
 <?php
-require('../library/connection.php');
-$db = get_db();
 session_start();
 
 
@@ -42,7 +40,7 @@ session_start();
           echo '<h4>Player Roster</h4><ol>';        
           foreach ($db->query('SELECT first_name, last_name FROM persons') as $row)
           {
-            echo "<li> Person:". $row['first_name'] . " " . $row['last_name'] . "</li>";
+            echo "<li> Person: ". $row['first_name'] . " " . $row['last_name'] . "</li>";
           }          
           echo '</ol>';
         ?>
