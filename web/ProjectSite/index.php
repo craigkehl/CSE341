@@ -13,9 +13,11 @@ $dbName = ltrim($dbOpts["path"],'/');
 $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
 $persons = $db->query('SELECT * FROM persons');
+echo $persons;
+
 echo "<ol>";
 
-while ($p = $persons->fetch(PDO::FETCH_ASSOC)) {
+while ($p = $persons->fetchObject()) {
   echo $person['first_name'] . " " . $person['last_name'];
 }
 
