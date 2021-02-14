@@ -41,3 +41,5 @@ function get_db()
   }
   return $db;
 }
+$db = get_db();
+var_dump($db);
