@@ -3,8 +3,8 @@
 
 //Get the database and model brought into scope
 require_once '../library/connections.php';
-require_once '../library/functions.php';
-require_once '../model/accounts-model.php';
+// require_once '../library/functions.php';
+// require_once '../model/accounts-model.php';
 
 $action = filter_input(INPUT_GET, 'action');
   if($action == NULL) {
@@ -30,34 +30,34 @@ switch($action) {
     // $parentPassword = filter_input(INPUT_POST, 'parentPassword', FILTER_SANITIZE_STRING);
 
      // filter and store the data
-     $playerFirstname = test_input($_POST['playerFirstName']);// added filter type
-     $playerLastname = test_input($_POST['playerLastName']);
-     $playerBirthdate = test_input($_POST['playerBirthdate']);// added filter type
-     $playerGender = test_input($_POST['playerGender']);
-     $parentFirstname = test_input($_POST['parentFirstName']);// added filter type
-     $parentLastname = test_input($_POST['parentLastName']);
-     $parentMobile = test_input($_POST['parentMobile']);
-     $parentEmail = test_input($_POST['parentEmail']);
-     $parentPassword = test_input($_POST['parentPassword']);
+     $playerFirstname = ($_POST['playerFirstName']);// added filter type
+     $playerLastname = ($_POST['playerLastName']);
+     $playerBirthdate = ($_POST['playerBirthdate']);// added filter type
+     $playerGender = ($_POST['playerGender']);
+     $parentFirstname = ($_POST['parentFirstName']);// added filter type
+     $parentLastname = ($_POST['parentLastName']);
+     $parentMobile = ($_POST['parentMobile']);
+     $parentEmail = ($_POST['parentEmail']);
+     $parentPassword = ($_POST['parentPassword']);
 
     // $parentEmail = checkEmail($parentEmail);
     // $checkPassword = checkPassword($parentPassword);
 
     // check if there is data in the variable
-    if (
-      empty($playerFirstname) || 
-      empty($playerLastname) || 
-      empty($playerBirthdate) || 
-      empty($playerGender) || 
-      empty($parentFirstname) || 
-      empty($parentLastname) || 
-      empty($parentMobile) ||
-      empty($parentEmail) || 
-      empty($parentPassword)) {
-      $message = '<p>Please provide information for all required form fields.</p>';
-      include '../view/player-registration.php';
-      exit;
-    } 
+    // if (
+    //   empty($playerFirstname) || 
+    //   empty($playerLastname) || 
+    //   empty($playerBirthdate) || 
+    //   empty($playerGender) || 
+    //   empty($parentFirstname) || 
+    //   empty($parentLastname) || 
+    //   empty($parentMobile) ||
+    //   empty($parentEmail) || 
+    //   empty($parentPassword)) {
+    //   $message = '<p>Please provide information for all required form fields.</p>';
+    //   include '../view/player-registration.php';
+    //   exit;
+    // } 
 
     $playerIsFemale = ($playerGender = "female") ? true: false;
 
