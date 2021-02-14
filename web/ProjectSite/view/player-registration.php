@@ -21,12 +21,7 @@
         </a>
       </div>
     </div>
-    <div id="sideNavContainer" style="display:none;">
-      <ul>
-        <li><a href="">About Me</a></li>
-        <li><a href="">Projects</a></li>
-      </ul>
-    </div>
+    <?php include 'includes/nav.php';  ?>
     <div id="mainSectionContainer">
       <div id="mainContentContainer">
         <?php if (isset($message)) { echo $message; } ?> 

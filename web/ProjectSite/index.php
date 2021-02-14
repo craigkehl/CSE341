@@ -13,6 +13,6 @@ switch($action) {
     break;
 
   default:
-    header("Location: ./accounts/index.php?action=register_player_form");
+    include 'view/home.php';
     exit();
 }

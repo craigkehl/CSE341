@@ -4,29 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Craig Kehl">
-  <meta name="description" content="CSE341 Template Page">
-  <title>CSE 341 Template</title>  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="./CSS/style.css">
+  <meta name="description" content="CSE341 Project Page">
+  <title>CSE-341 Projects</title> 
+        <?php require './includes/links.php'; ?>
 </head>
 <body>
-  <h1>Template Page</h1>
-  <section>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="https://cdn.pixabay.com/photo/2014/01/18/10/14/vaulted-cellar-247391_960_720.jpg" alt="Brick Arch Tunel">
-      <div class="card-body">
-        <h5 class="card-title">The Canal Bend</h5>
-        <p class="card-text text-primary">Jogging the canal in San Antonio</p>  
-      </div> 
-        <input type="text" class="form-control" placeholder="type color" aria-label="new color" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <span class="btn btn-primary" id="basic-addon2">Change</span>
-        </div>
+  
+  <div id="pageContainer">
+    <div id="headerContainer">
+      <button class="navShowHide">            
+        <span class="material-icons">menu</span>
+      </button>
+      <h1>Coming Real Soom</h1>  
+      <div class="loginIcon">
+        <a href="#">
+          <span class="material-icons">login</span>
+        </a>
+      </div>
     </div>
-    
-    
+    <?php include 'includes/nav.php';  ?>
+    <div id="mainSectionContainer">
+      <div id="mainContentContainer"> 
+        <h2>Place Content Here</h2>
+      </div>
+    </div>
+  </div>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/main.js"></script> 
+  <script src="../js/main.js"></script> 
 </body>
 </html>

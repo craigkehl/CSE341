@@ -20,31 +20,47 @@ session_start();
       <button class="navShowHide">            
         <span class="material-icons">menu</span>
       </button>
-      <h1 class="h1Scaled">Player Registration</h1>  
+      <h1 class="h1Scaled">Dev Community</h1>  
       <div class="loginIcon">
         <a href="#">
           <span class="material-icons">login</span>
         </a>
       </div>
     </div>
-    <div id="sideNavContainer" style="display:none;">
-      <ul>
-        <li><a href="">About Me</a></li>
-        <li><a href="">Projects</a></li>
-      </ul>
-    </div>
+    <?php include 'includes/nav.php';  ?>
     <div id="mainSectionContainer">
-      <div id="mainContentContainer">
-        <h1> You Made it!</h1>
-        <?php
-          echo '<h4>Player Roster</h4><ol>';        
-          foreach ($db->query('SELECT first_name, last_name FROM persons') as $row)
-          {
-            echo "<li> Person: ". $row['first_name'] . " " . $row['last_name'] . "</li>";
-          }          
-          echo '</ol>';
-        ?>
-      </div>
+      <div id="mainContentContainer">        
+        <?php if (isset($message)) { echo $message; } ?> 
+        <form action="/ProjectSite/accounts/index.php" method="POST">
+          <div class="formCardsContainer">
+            <div class="cardContainer login">
+              <div class="cardHeaderContainer">
+                <div class="cardIcon">
+                  <span class="material-icons">login</span>
+                </div>
+                <h4>Login</h4>
+              </div>
+              <div class="cardContent">
+                <div class="cardFormContainer">
+                  <div class="inputRow">
+                    <div class="inputContainer">
+                      <label for="email">Email</label>
+                      <input class="cardForm" type="email" name="email" 
+                          <?php if(isset($Email)){echo "value='$Email'";} ?>
+                          required>
+                      <label for="password">Password</label>
+                      <input class="cardForm" type="password" name="password" 
+                          <?php if(isset($password)){echo "value='$password'";} ?>
+                          required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>       
+          </div>
+          <input type="submit" name="submit" class="formBtn" value="Login">
+          <input type="hidden" name="action" value="Login">
+        </form>
     </div>
   </div>  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
