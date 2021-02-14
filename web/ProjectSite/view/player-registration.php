@@ -8,7 +8,7 @@
   <title>Player Registration</title> 
        <?php 
         // require $_SERVER['HTTP_HOST'].'ProjectSite/view/includes/links.php'; 
-        require 'includes/links.php'; 
+        require '/ProjectSite/view/includes/links.php'; 
        ?>  
 </head>
 <body>  

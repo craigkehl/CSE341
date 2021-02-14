@@ -2,12 +2,24 @@
 // This is the accounts controller for this website
 
 //Get the database and model brought into scope
-require_once '../library/connections.php';
-require_once '../library/functions.php';
-require_once '../model/accounts-model.php';
+require_once '/ProjectSite/library/connections.php';
+require_once '/ProjectSite/library/functions.php';
+require_once '/ProjectSite/model/accounts-model.php';
 
+$db = db_Connect();
 
-// Get the classifications array
+$stmt = $db->prepare('SELECT * FROM persons');
+    $stmt->execute();
+    $persons = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo "<ol>"
+    foreach ($persons as $person) {
+      $fname = $person['first_name'];
+      $lname = $person['last_name'];
+      
+      echo "<li> $fname $lname</li>";
+    }
+    echo "</ol>";
+    exit();
 
 $action = filter_input(INPUT_GET, 'action');
   if($action == NULL) {
@@ -16,7 +28,7 @@ $action = filter_input(INPUT_GET, 'action');
 
 switch($action) {
   case 'login':
-    include '../view/login.php';
+    include '/ProjectSite/view/login.php';
   break; 
 
   case 'register_player':

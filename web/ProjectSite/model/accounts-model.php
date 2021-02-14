@@ -1,7 +1,7 @@
 <?php
 /* This is the model for the accounts */ 
 // This function handles site registrations
-function regClient(
+function regPerson(
           $playerFirstname, 
           $playerLastname, 
           $playerBirthdate, 
