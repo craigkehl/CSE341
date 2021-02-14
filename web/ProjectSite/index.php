@@ -9,10 +9,10 @@ $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
 switch($action) {
   case 'template':
-    include '/ProjectSite/view/template.php';
+    include 'view/template.php';
     break;
 
   default:
-    include '/ProjectSite/view/home.php';
+    include 'view/home.php';
     exit();
 }

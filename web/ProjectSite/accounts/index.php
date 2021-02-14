@@ -2,7 +2,7 @@
 // This is the accounts controller for this website
 session_start();
 require('../library/connection.php');
-require('../model/accounts-model.php');
+// require('../model/accounts-model.php');
 $db = get_db();
 
 
