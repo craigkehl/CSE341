@@ -6,20 +6,6 @@ require_once '/ProjectSite/library/connections.php';
 require_once '/ProjectSite/library/functions.php';
 require_once '/ProjectSite/model/accounts-model.php';
 
-$db = db_Connect();
-
-$stmt = $db->prepare('SELECT * FROM persons');
-$stmt->execute();
-$persons = $stmt->fetchAll(PDO::FETCH_ASSOC);
-echo "<ol>";
-
-foreach ($person in $persons) {
-  echo $person['first_name'] + " " + $person['last_name'];
-}
-
-echo "</ol>";
-exit();
-
 $action = filter_input(INPUT_GET, 'action');
   if($action == NULL) {
     $action = filter_input(INPUT_POST, 'action');
