@@ -16,9 +16,13 @@ $action = filter_input(INPUT_GET, 'action');
   }
 
 switch($action) {
-  case 'login':
+  case 'login_form':
     include '../view/login.php';
-  break; 
+  break;   
+    
+  case 'register_player_form':
+    include '../view/player-registration.php';
+  break;   
 
   case 'register_player':
     
@@ -91,10 +95,6 @@ switch($action) {
       exit;
     }
   break;
-    
-  case 'register_player_form':
-    include '../view/player-registration.php';
-  break;   
 
   default:
 }

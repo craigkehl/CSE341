@@ -16,17 +16,7 @@ session_start();
 </head>
 <body>  
   <div id="pageContainer">
-    <div id="headerContainer">
-      <button class="navShowHide">            
-        <span class="material-icons">menu</span>
-      </button>
-      <h1 class="h1Scaled">Dev Community</h1>  
-      <div class="loginIcon">
-        <a href="#">
-          <span class="material-icons">login</span>
-        </a>
-      </div>
-    </div>
+    <?php include 'includes/header.php';  ?>
     <?php include 'includes/nav.php';  ?>
     <div id="mainSectionContainer">
       <div id="mainContentContainer">        

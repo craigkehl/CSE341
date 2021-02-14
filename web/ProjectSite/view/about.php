@@ -11,24 +11,8 @@
 <body>
   
   <div id="pageContainer">
-    <div id="headerContainer">
-      <button class="navShowHide">            
-        <span class="material-icons">menu</span>
-      </button>
-      <h1>About Me & My Family</h1>  
-      <div class="loginIcon">
-        <a href="#">
-          <span class="material-icons">login</span>
-        </a>
-      </div>
-    </div>
-
-    <div id="sideNavContainer" style="display:none;">
-      <ul>
-        <li><a href="">About Me</a></li>
-        <li><a href="">Projects</a></li>
-      </ul>
-    </div>
+    <?php include 'includes/header.php';  ?>
+    <?php include 'includes/nav.php';  ?>
 
     <div id="mainSectionContainer">
       <div id="mainBannerContainer">

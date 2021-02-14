@@ -10,17 +10,7 @@
 </head>
 <body>  
   <div id="pageContainer">
-    <div id="headerContainer">
-      <button class="navShowHide">            
-        <span class="material-icons">menu</span>
-      </button>
-      <h1 class="h1Scaled">Player Registration</h1>  
-      <div class="loginIcon">
-        <a href="#">
-          <span class="material-icons">login</span>
-        </a>
-      </div>
-    </div>
+    <?php include 'includes/header.php';  ?>
     <?php include 'includes/nav.php';  ?>
     <div id="mainSectionContainer">
       <div id="mainContentContainer">
@@ -123,12 +113,10 @@
         </form>
       </div>
     </div>
-  </div>  
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </div> 
+    <?php include 'includes/commonScripts.php';  ?>  
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="../js/main.js"></script> 
   <script src="../js/datePicker.js"></script>
 </body>
 </html>
