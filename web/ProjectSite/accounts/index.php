@@ -9,17 +9,16 @@ require_once '/ProjectSite/model/accounts-model.php';
 $db = db_Connect();
 
 $stmt = $db->prepare('SELECT * FROM persons');
-    $stmt->execute();
-    $persons = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo "<ol>"
-    foreach ($persons as $person) {
-      $fname = $person['first_name'];
-      $lname = $person['last_name'];
-      
-      echo "<li> $fname $lname</li>";
-    }
-    echo "</ol>";
-    exit();
+$stmt->execute();
+$persons = $stmt->fetchAll(PDO::FETCH_ASSOC);
+echo "<ol>";
+
+foreach ($person in $persons) {
+  echo $person['first_name'] + " " + $person['last_name'];
+}
+
+echo "</ol>";
+exit();
 
 $action = filter_input(INPUT_GET, 'action');
   if($action == NULL) {
