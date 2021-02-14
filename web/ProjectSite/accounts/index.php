@@ -2,9 +2,9 @@
 // This is the accounts controller for this website
 
 //Get the database and model brought into scope
-require_once '/ProjectSite/library/connections.php';
-require_once '/ProjectSite/library/functions.php';
-require_once '/ProjectSite/model/accounts-model.php';
+require_once '../library/connections.php';
+require_once '../library/functions.php';
+require_once '../model/accounts-model.php';
 
 $action = filter_input(INPUT_GET, 'action');
   if($action == NULL) {
@@ -13,7 +13,7 @@ $action = filter_input(INPUT_GET, 'action');
 
 switch($action) {
   case 'login':
-    include '/ProjectSite/view/login.php';
+    include '../view/login.php';
   break; 
 
   case 'register_player':
@@ -65,7 +65,7 @@ switch($action) {
     $hashedPassword = password_hash($parentPassword, PASSWORD_DEFAULT);
 
     // Send the data to the model
-    $regOutcome = regClient(
+    $regOutcome = regPerson(
               $playerFirstname, 
               $playerLastname, 
               $playerBirthdate, 
