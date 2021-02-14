@@ -17,11 +17,11 @@ $action = filter_input(INPUT_GET, 'action');
 
 switch($action) {
   case 'login_form':
-    include '../view/login.php';
+    include '/ProjectSite/view/login.php';
   break;   
     
   case 'register_player_form':
-    include '../view/player-registration.php';
+    include '/ProjectSite/view/player-registration.php';
   break;   
 
   case 'register_player':

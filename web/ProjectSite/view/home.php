@@ -22,6 +22,6 @@ session_start();
       </div>
     </div>
   </div> 
-  <?php include 'includes/commonScripts.php';  ?>  
+  <?php include '/ProjectSite/view/includes/commonScripts.php';  ?>  
 </body>
 </html>
