@@ -6,19 +6,19 @@
   <meta name="author" content="Craig Kehl">
   <meta name="description" content="CSE341 Project Page">
   <title>CSE-341 Projects</title> 
-        <?php require './includes/links.php'; ?>
+        <?php require './links.php'; ?>
 </head>
 <body>
   
   <div id="pageContainer">
-    <?php include 'includes/header.php';  ?>
-    <?php include 'includes/nav.php';  ?>
+    <?php include './header.php';  ?>
+    <?php include './nav.php';  ?>
     <div id="mainSectionContainer">
       <div id="mainContentContainer"> 
         <h2>Place Content Here</h2>
       </div>
     </div>
   </div> 
-    <?php include '/ProjectSite/view/includes/commonScripts.php';  ?>  
+    <?php include './includes/commonScripts.php';  ?>  
 </body>
 </html>
