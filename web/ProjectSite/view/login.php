@@ -53,6 +53,6 @@ session_start();
         </form>
     </div>
   </div> 
-    <?php include '/ProjectSite/view/includes/commonScripts.php';  ?> 
+    <?php include 'includes/commonScripts.php';  ?> 
 </body>
 </html>
