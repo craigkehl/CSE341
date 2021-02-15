@@ -2,6 +2,7 @@
 /* This is the model for the accounts */ 
 // This function handles site registrations
 function regPerson(
+          $db,
           $playerFirstname, 
           $playerLastname, 
           $playerBirthdate, 

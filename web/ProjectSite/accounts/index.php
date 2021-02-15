@@ -74,6 +74,7 @@ switch($action) {
 
     // Send the data to the model
     $regOutcome = regPerson(
+              $db,
               $playerFirstname, 
               $playerLastname, 
               $playerBirthdate, 
