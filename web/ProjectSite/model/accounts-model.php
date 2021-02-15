@@ -45,7 +45,7 @@ function regPerson(
     $rowsChanged += $stmt->rowCount();
     $newParentId = $db->lastInsertId("persons_id_seq");  
     
-    $query3 = 'INSERT INTO parents(parent_person_id, parent_child_id) VALUES(:new_parent_id, new_player_id)';
+    $query3 = 'INSERT INTO parents(parent_person_id, parent_child_id) VALUES(:new_parent_id, :new_player_id)';
     $stmt = $db->prepare($query3);
     $stmt->bindValue(':new_parent_id', $newParentId, PDO::PARAM_INT);
     $stmt->bindValue(':new_player_id', $newPlayerId, PDO::PARAM_INT);
