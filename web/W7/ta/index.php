@@ -3,9 +3,9 @@
 session_start();
 
 //Get the database and model brought into scope
-require_once '/W7/ta/library/connection.php';
-require_once '/W7/ta/models/accounts.php';
-require_once '/W7/ta/library/functions.php';
+require_once 'library/connection.php';
+require_once 'models/accounts.php';
+require_once 'library/functions.php';
 
 
 // Check if new or return user
