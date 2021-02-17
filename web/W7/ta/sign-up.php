@@ -15,7 +15,7 @@
                                                           echo "value='$username'";
                                                         } ?> required>
     </label>
-    <label class="" for="password">Password
+    <label class="" for="password"><br>Password<br>
       <span class="required">Password requirements:
         <ul>
           <li>Must contain at least one;
@@ -29,8 +29,13 @@
           <li>No blank spaces</li>
         </ul>
       </span>
-      <input name="password" id="password" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+      <?php if(isset($astrix)) { echo $astrix; } ?><input name="password" id="password" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
     </label>
+    <label class="" for="passwordCheck">Re-enter Password
+      
+     <?php if(isset($astrix)) { echo $astrix; } ?><input name="passwordCheck" id="passwordCheck" type="passwordCheck" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+    </label>
+    
     <input type="submit" name="submit" class="regbtn" value="Sign-UP">
     <input type="hidden" name="action" value="sign-up">
   </form>

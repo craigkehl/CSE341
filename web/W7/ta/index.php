@@ -29,7 +29,12 @@ switch($action) {
 
       $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
       $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
-  
+      $passwordCheck = filter_input(INPUT_POST, 'passwordCheck', FILTER_SANITIZE_STRING);
+      if ($password != $passwordCheck) {
+        $message = "<p style='color: red;'>Passwords do not match</p>";
+        $astrix = "<span style='color: red;'>*</span>";
+        include 'sign-up.php'
+      }
       $checkPassword = checkPassword($password);
   
       // check for existing email
