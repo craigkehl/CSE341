@@ -33,7 +33,7 @@ switch($action) {
       if ($password != $passwordCheck) {
         $message = "<p style='color: red;'>Passwords do not match</p>";
         $astrix = "<span style='color: red;'>*</span>";
-        include 'sign-up.php'
+        include 'sign-up.php';
       }
       $checkPassword = checkPassword($password);
   
