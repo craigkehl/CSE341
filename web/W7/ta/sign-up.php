@@ -9,7 +9,7 @@
 <body>
   <h1>Sign-Up</h1>
   <?php if(isset($message)) { echo $message; } ?>
-  <form action="/W7/ta/index.php" method="post">
+  <form id="signupForm"  action="/W7/ta/index.php" method="post">
     <label for="username">Username<span class="required">(required)</span>
       <input name="username" id="username" type="text" <?php if (isset($username)) {
                                                           echo "value='$username'";
@@ -39,6 +39,24 @@
     <input type="submit" name="submit" class="regbtn" value="Sign-UP">
     <input type="hidden" name="action" value="sign-up">
   </form>
+  <script>
+    pwd1 = document.querySelector("#password");
+    pwd2 = document.querySelector("#passwordCheck");
+
+    pwd2.addEventListener('input', function (evt) {
+      if (pwd1.value != pwd2.value) {
+        pwd2.style.backgroundColor = "red";
+      }
+      else {
+        pwd2.style.backgroundColor = "white";
+      }
+});
+    $("#signupForm").submit(function (event) {
+  event.preventDefault();
+  console.log("before post");
   
+  
+});
+  </script>
 </body>
 </html>
