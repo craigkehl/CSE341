@@ -3,7 +3,7 @@
 session_start();
 
 //Get the database and model brought into scope
-require_once '/W7/ta/library/connections.php';
+require_once '/W7/ta/library/connection.php';
 require_once '/W7/ta/models/accounts.php';
 require_once '/W7/ta/library/functions.php';
 
