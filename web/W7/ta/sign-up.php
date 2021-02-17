@@ -33,7 +33,7 @@
     </label>
     <label class="" for="passwordCheck">Re-enter Password
       
-     <?php if(isset($astrix)) { echo $astrix; } ?><input name="passwordCheck" id="passwordCheck" type="passwordCheck" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+     <?php if(isset($astrix)) { echo $astrix; } ?><input name="passwordCheck" id="passwordCheck" type="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?!.*[\s])(?=.*[A-Z])(?=.*[a-z]).*$" required>
     </label>
     
     <input type="submit" name="submit" class="regbtn" value="Sign-UP">

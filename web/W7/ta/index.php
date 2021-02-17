@@ -34,6 +34,7 @@ switch($action) {
         $message = "<p style='color: red;'>Passwords do not match</p>";
         $astrix = "<span style='color: red;'>*</span>";
         include 'sign-up.php';
+        die();
       }
       $checkPassword = checkPassword($password);
   
