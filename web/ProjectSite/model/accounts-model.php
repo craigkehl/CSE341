@@ -4,9 +4,11 @@
 function regPerson(
           $db,
           $playerFirstname, 
-          $playerLastname, 
-          $playerBirthdate, 
-          $playerIsFemale,  
+          $playerLastname,
+          $playerNickname, 
+          $playerBirthdate,
+          $playerIsFemale,
+          $playerMobile,    
           $parentFirstname, 
           $parentLastname, 
           $parentMobile, 
@@ -17,13 +19,16 @@ function regPerson(
       // Insert Player
       $db->beginTransaction();
       
-      $query = 'INSERT INTO persons(first_name, last_name, birthdate, is_female) VALUES (:first_name, :last_name, :birthdate, :is_female)';
+      $query = 'INSERT INTO persons(first_name, last_name, nick_name, birthdate, is_female, mobile_number) 
+          VALUES (:first_name, :last_name, nick_name, :birthdate, :is_female, :mobile)';
 
       $stmt = $db->prepare($query);
       $stmt->bindValue(':first_name', $playerFirstname, PDO::PARAM_STR);
       $stmt->bindValue(':last_name', $playerLastname, PDO::PARAM_STR);
+      $stmt->bindValue(':last_name', $playerNickname, PDO::PARAM_STR);
       $stmt->bindValue(':birthdate', $playerBirthdate, PDO::PARAM_STR);
       $stmt->bindValue(':is_female', $playerIsFemale, PDO::PARAM_BOOL);
+      $stmt->bindValue(':mobile', $playerMobile, PDO::PARAM_STR);
       // Insert the data
       $stmt->execute();
       $rowsChanged = $stmt->rowCount();
@@ -61,3 +66,14 @@ function regPerson(
         throw $e;
     }  
 };
+
+function getMembers() {
+  $db = get_db(); 
+  $sql = 'SELECT pl.first_name||" "||pl.last_name AS "Player"
+          FROM persons'; 
+  $stmt = $db->prepare($sql); 
+  $stmt->execute(); 
+  $inventory = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+  $stmt->closeCursor(); 
+  return $inventory; 
+}
