@@ -29,21 +29,27 @@
                 <div class="cardFormContainer">
                   <div class="inputRow">
                     <div class="inputContainer">
-                      <label for="playerFirstName">Name</label>
-                      <input class="cardForm" type="text" name="playerFirstName" 
+                      <label for="playerFirstname">First Name<span class="required"> (required)</span></label>
+                      <input class="cardForm" type="text" name="playerFirstname" 
                           <?php if(isset($playerFirstname)){echo "value='$playerFirstname'";} ?>
                           required>
-                      <label for="playerLastName">Last Name</label>
-                      <input class="cardForm" type="text" name="playerLastName" 
+                      <label for="playerLastname">Last Name<span class="required"> (required)</span></label>
+                      <input class="cardForm" type="text" name="playerLastname" 
                           <?php if(isset($playerLastname)){echo "value='$playerLastname'";} ?>
                           required>
-                      <lable for="playerBirthdate">Birthdate:</label>
+                      <label for="playerNickname">Nickname</label>
+                      <input class="cardForm" type="text" name="playerNickname" 
+                          <?php if(isset($playerNickname)){echo "value='$playerNickname'";} ?>
+                          required>
+                      <lable for="playerBirthdate">Birthdate<span class="required"> (required)</span></label>
                       <input class="cardForm" type="text" id="datepicker" name="playerBirthdate">
-                      <p>Please select your gender:</p>
+                      <p>Please select your gender<span class="required"> (required)</span></p>
                       <input type="radio" id="male" name="playerGender" value="male">
                       <label for="male">Male</label>
                       <input type="radio" id="female" name="playerGender" value="female">
                       <label for="female">Female</label>
+                      <label for="playerMobile"></label>Mobile Number</label>
+                      <input class="cardForm" type="text" name="playerMobile">
                     </div>
                   </div>
                 </div>

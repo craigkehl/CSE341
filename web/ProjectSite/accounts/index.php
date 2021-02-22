@@ -29,8 +29,10 @@ switch($action) {
     // // filter and store the data
     // $playerFirstname = filter_input(INPUT_POST, 'playerFirstname', FILTER_SANITIZE_STRING);// added filter type
     // $playerLastname = filter_input(INPUT_POST, 'playerLastname', FILTER_SANITIZE_STRING);
+    // $playerNickname = filter_input(INPUT_POST, 'playerNickname', FILTER_SANITIZE_STRING);
     // $playerBirthdate = filter_input(INPUT_POST, 'playerBirthdate', FILTER_SANITIZE_STRING);// added filter type
     // $playerGender = filter_input(INPUT_POST, 'playerGender', FILTER_SANITIZE_STRING);
+    // $playerMobile = filter_input(INPUT_POST, 'playerMobile', FILTER_SANITIZE_STRING);
     // $parentFirstname = filter_input(INPUT_POST, 'parentFirstname', FILTER_SANITIZE_STRING);// added filter type
     // $parentLastname = filter_input(INPUT_POST, 'parentLastname', FILTER_SANITIZE_STRING);
     // $parentMobile = filter_input(INPUT_POST, 'parentMobile', FILTER_SANITIZE_STRING);
@@ -38,10 +40,12 @@ switch($action) {
     // $parentPassword = filter_input(INPUT_POST, 'parentPassword', FILTER_SANITIZE_STRING);
 
      // filter and store the data
-     $playerFirstname = ($_POST['playerFirstName']);// added filter type
-     $playerLastname = ($_POST['playerLastName']);
+     $playerFirstname = ($_POST['playerFirstname']);// added filter type
+     $playerLastname = ($_POST['playerLastname']);
+     $playerNickname = ($_POST['playerNickname']);
      $playerBirthdate = ($_POST['playerBirthdate']);// added filter type
      $playerGender = ($_POST['playerGender']);
+     $playerMobile = ($_POST['playerMobile']);
      $parentFirstname = ($_POST['parentFirstName']);// added filter type
      $parentLastname = ($_POST['parentLastName']);
      $parentMobile = ($_POST['parentMobile']);
@@ -55,6 +59,7 @@ switch($action) {
     // if (
     //   empty($playerFirstname) || 
     //   empty($playerLastname) || 
+    //   empty($playerNickname) || 
     //   empty($playerBirthdate) || 
     //   empty($playerGender) || 
     //   empty($parentFirstname) || 
@@ -76,9 +81,11 @@ switch($action) {
     $regOutcome = regPerson(
               $db,
               $playerFirstname, 
-              $playerLastname, 
-              $playerBirthdate, 
+              $playerLastname,
+              $playerNickname,
+              $playerBirthdate,
               $playerIsFemale, 
+              $playerMobile,  
               $parentFirstname, 
               $parentLastname, 
               $parentMobile, 
