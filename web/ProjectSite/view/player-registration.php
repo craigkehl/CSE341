@@ -56,7 +56,7 @@
               </div>
             </div>       
           
-              <!-- Parent's Name -->
+              <!-- Parent's Name Update!-->
             <div class="cardContainer parent name">
               <div class="cardHeaderContainer  parent">
                 <div class="cardIcon">
@@ -72,6 +72,8 @@
                       <input class="cardForm" type="text" name="parentFirstName">
                       <label for="parentLastName"></label>Last Name</label>
                       <input class="cardForm" type="text" name="parentLastName">
+                      <label for="parentNickname"></label>Nickname</label>
+                      <input class="cardForm" type="text" name="parentNickname">
                     </div>
                   </div>
                 </div>
